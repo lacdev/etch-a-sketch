@@ -63,6 +63,12 @@ randomColorButton.addEventListener('click', ()=> {
     })
 })
 
+colorPicker.addEventListener('input', ()=> {
+    cells.forEach((cell)=> {
+        cell.classList.remove('random')
+    })
+} )
+
 const getRandomColor = () => {
     var letters = '0123456789ABCDEF'
     var color = '#';
