@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-container">
+    <h1 class="project-title">Etch A Sketch </h1>
+
+        <div class="main-container">
+            <div class="container">
+            </div>
+            <div class="buttons-container">
+                <button type="submit" class="clear-button selection-button" id="clear">Clear Grid</button>
+                <button type="submit" class="black-button selection-button" id="black">Black</button>
+                <button type="submit" class="random-button selection-button" id="random">Random</button>
+                <button type="submit" class="eraser-button selection-button" id="erase">Eraser</button>
+                <label for="favcolor">Select your favorite color:</label>
+                <input type="color" id="color" name="color" value="#ff0000">
+                <div class="range-container">
+                <input type="range" min="16" max="96" value="16" class="slider" name="range" id="range">
+                <label for="range">Grid Size</label>
+                </div>
+                
+            </div>
+        
+        </div>
+
+    <footer class="footer">Created with &#128150 for The Odin Project</footer>
+    </div>
+</body>
+</html>
