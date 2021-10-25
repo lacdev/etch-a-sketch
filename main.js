@@ -2,26 +2,17 @@ console.log("etch a sketch project")
 
 const container = document.querySelector(".container")
 
-const range = document.querySelector('#range')
-
-range.addEventListener('input', (event) => {
-    console.log(parseInt(event.target.value))
-})
-
 function createGrid(size) {
-    for (let i = 0; i < size; i++) {
-        const row = document.createElement('div')
-        row.classList.add('row')
-        for (let j = 0; j < size; j++) {
+    for (let i = 0; i < size * size; i++) {
         const cell = document.createElement('div')
         cell.classList.add('cell')
-        row.appendChild(cell)
-        }
-        container.appendChild(row)
+        container.appendChild(cell)
 }
 }
 
 createGrid(16)
+
+const range = document.querySelector('#range')
 
 const cells = container.querySelectorAll('.cell')
 
@@ -34,6 +25,13 @@ const blackColorButton = document.querySelector('.black-button')
 const eraser = document.querySelector('#erase')
 
 const clearButton = document.querySelector('.clear-button')
+
+range.addEventListener('input', (event) => {
+    let size = parseInt(event.target.value)
+    console.log(size)
+    // container.textContent = ''
+    // createGrid(size)
+})
 
 const clearGrid = () => {
     cells.forEach((cell) => {
