@@ -26,9 +26,18 @@ const eraser = document.querySelector('#erase')
 
 const clearButton = document.querySelector('.clear-button')
 
+function removeGrid(){
+    //while firstElementChild exists, remove it
+    while (container.firstChild){
+        container.removeChild(container.firstChild)
+    } 
+}
+
 range.addEventListener('input', (event) => {
     let size = parseInt(event.target.value)
     console.log(size)
+    removeGrid()
+    createGrid(size)
     // container.textContent = ''
     // createGrid(size)
 })
@@ -85,3 +94,5 @@ const paintCurrentColor = (event) => {
 }
 
 container.addEventListener('mouseover', paintCurrentColor )
+
+
