@@ -1,5 +1,3 @@
-console.log("etch a sketch project")
-
 const container = document.querySelector(".container")
 const totalSize = container.scrollWidth;
 
