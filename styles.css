@@ -28,7 +28,7 @@ body {
 .project-title {
     margin: 16px;
     align-self: center;
-    font-weight: 9  00;
+    font-weight: 900;
     font-size: 48px;
 }
 
@@ -83,8 +83,6 @@ body {
     flex: 1 1 0; 
     outline: 1px solid #000;
     background-color: white;
-    min-width: 60px;
-    min-height: 60px; 
 } 
 
 .slider {
