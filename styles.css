@@ -68,7 +68,7 @@ body {
     background-color: white ;
 }
 
-.container {
+.grid-container {
     align-self: center;
     height: 960px;
     width: 960px; 

@@ -1,4 +1,4 @@
-const container = document.querySelector(".container")
+const container = document.querySelector(".grid-container")
 const totalSize = container.scrollWidth;
 
 const createGrid = (size) => {
@@ -42,30 +42,34 @@ const clearGrid = () => {
 
 clearButton.addEventListener('click', clearGrid)
 
-blackColorButton.addEventListener('click', ()=> {
+const removeRandomClass = () => {
     document.querySelectorAll('.cell').forEach((cell) => {
         cell.classList.remove('random')    
     })
+}
+
+const toggleRandomClass = () => {
+    document.querySelectorAll('.cell').forEach((cell)=> {
+        cell.classList.toggle('random')
+    })
+}
+
+blackColorButton.addEventListener('click', ()=> {
+    removeRandomClass()
     colorPicker.value = "#000000"
 })
 
 eraser.addEventListener('click', ()=> {
-    document.querySelectorAll('.cell').forEach((cell) => {
-        cell.classList.remove('random')
-    })
+    removeRandomClass()
     colorPicker.value = '#FFFFFF'
 })
 
 randomColorButton.addEventListener('click', ()=> {
-    document.querySelectorAll('.cell').forEach((cell)=> {
-        cell.classList.toggle('random')
-    })
+    toggleRandomClass()
 })
 
 colorPicker.addEventListener('input', ()=> {
-    document.querySelectorAll('.cell').forEach((cell) => {
-        cell.classList.remove('random')
-    })
+    removeRandomClass()
 })
 
 const getRandomColor = () => {
